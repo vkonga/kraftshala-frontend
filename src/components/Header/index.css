@@ -1,0 +1,20 @@
+.black-background {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vh;
+}
+.white-background {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vh;
+}
+.weather-forecast-heading{
+    font-size: 20px;
+    font-weight: 700;
+}

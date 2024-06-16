@@ -1,0 +1,220 @@
+*{
+    margin: 0px;
+}
+.input-search{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    
+    border-width: 1px solid black;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.add-button{
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.button{
+    width: 130px;
+    height: 40px;
+    background-color: blue;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.white-bgColor{
+    background-color: white;
+    color: white;
+}
+.black-bgColor {
+    background-color: black;
+    color: black;
+}
+
+@media (max-width:767px){
+
+    .weather-container{
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .weather-conditions-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+    
+    .heading{
+        font-size: 2vh;
+        font-weight: 700;
+        font-family: "Roboto";
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+    .low-hight-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .weather-temperature-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(102, 187, 221);
+        width: 80vw;
+        
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
+    
+    .weather-icon{
+        width: 140px;
+        height: 120px;
+    }
+    .paragraph{
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .span-word{
+        color: rgb(174, 110, 13);
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+}
+
+@media (min-width:767px) and (max-width: 991px) {
+    .weather-container{
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .weather-conditions-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+    
+    .heading{
+        font-size: 3vh;
+        font-weight: 700;
+        font-family: "Roboto";
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+    .low-hight-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .weather-temperature-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(102, 187, 221);
+        width: 30vw;
+        
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .weather-icon{
+        width: 140px;
+        height: 120px;
+    }
+    .paragraph{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .span-word{
+        color: rgb(174, 110, 13);
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+@media (min-width:992px){
+    .weather-container{
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+    .weather-conditions-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+    
+    .heading{
+        font-size: 3vh;
+        font-weight: 700;
+        font-family: "Roboto";
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+    .low-hight-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .weather-temperature-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(102, 187, 221);
+        width: 20vw;
+        
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .weather-icon{
+        width: 140px;
+        height: 120px;
+    }
+    .paragraph{
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .span-word{
+        color: rgb(174, 110, 13);
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {Component} from 'react'
+import Home from './components/Home'
+import Header from './components/Header'
+import weathercontext from './weatherContext/weathercontext'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {mode:true}
+
+  changeMode = () => {
+    const {mode} = this.state
+    this.setState({mode:!mode})
+  }
+
+  render() {
+
+    const {mode} = this.state
+
+    return (
+      <weathercontext.Provider
+        value={{mode,changeMode:this.changeMode}}
+      >
+        <Header />
+        <Home />
+      </weathercontext.Provider>
+    )
+  }
+
 }
 
-export default App;
+export default App
