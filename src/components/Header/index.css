@@ -1,20 +1,75 @@
-.black-background {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100vh;
+
+@media (max-width:600px){
+    .black-background {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 600px;
+        padding-top: 20px;
+    }
+    .white-background {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 600px;
+        padding-top: 20px;
+    }
+    .weather-forecast-heading{
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
-.white-background {
-    background-color: white;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100vh;
+
+@media (min-width:601px) and (max-width: 900px){
+    .black-background {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 900px;
+        padding-top: 20px;
+    }
+    .white-background {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 900px;
+        padding-top: 20px;
+    }
+    .weather-forecast-heading{
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
-.weather-forecast-heading{
-    font-size: 20px;
-    font-weight: 700;
+
+@media (min-width:901px){
+    .black-background {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 901px;
+        padding-top: 20px;
+    }
+    .white-background {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 901px;
+        padding-top: 20px;
+    }
+    .weather-forecast-heading{
+        font-size: 20px;
+        font-weight: 700;
+    }
 }

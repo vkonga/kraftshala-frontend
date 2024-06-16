@@ -38,10 +38,10 @@
     color: black;
 }
 
-@media (max-width:767px){
+@media (max-width:600px){
 
     .weather-container{
-        width: 100vh;
+        max-width: 600px;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -100,9 +100,9 @@
 
 }
 
-@media (min-width:767px) and (max-width: 991px) {
+@media (min-width:601px) and (max-width: 900px) {
     .weather-container{
-        width: 100vh;
+        max-width: 900px;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -159,9 +159,9 @@
     }
 }
 
-@media (min-width:992px){
+@media (min-width:901px){
     .weather-container{
-        width: 100vh;
+        max-width: 901px;
         height: 100vh;
         display: flex;
         flex-direction: column;

@@ -1,20 +1,22 @@
-import {Component} from 'react'
-import weathercontext from '../../weatherContext/weathercontext';
-import './index.css'
+import {Component} from 'react' // Importing the React Component
+import weathercontext from '../../weatherContext/weathercontext'; // Importing the weather context for theming
+import './index.css'; // Importing CSS styles
 
 
 
 class Home extends Component {
 
+    // Initial state of the component
     state = {location:"Hyderabad",weatherReport:[],errorMsg:"",locationList:[]}
 
     
-    
+    // Function to handle input value change
     onChangeInputValue = event => {
         console.log(event.target.value)
         this.setState({location:event.target.value})
     }
 
+    // Function to handle form submission
     onSubmitForm = async event => {
         event.preventDefault()
         
@@ -27,14 +29,19 @@ class Home extends Component {
             const data = await response.json();
             console.log(data)
             if(response.ok === true) {
+                // Converting temperatures from Kelvin to Celsius
                 const temperatureInCelsius = (data.main.temp - 273.15).toFixed(2);
                 const temperatureFeelLike = (data.main.feels_like - 273.15).toFixed(2);
                 const temperatureMinimun = (data.main.temp_min - 273.15).toFixed(2);
                 const temperatureMaximum = (data.main.temp_max - 273.15).toFixed(2);
+                
+                // Formatting date and time
                 const dataDate = new Date(data.dt*1000).toLocaleDateString()
                 const dataTime = new Date(data.dt*1000).toLocaleTimeString()
                 const humidity = data.main.humidity
                 const pressure = data.main.pressure
+                
+                // Creating an object for weather report
                 const updateWeatherReport = {
                     coordinate: data.coord,
                     weather: data.weather[0],
@@ -50,6 +57,7 @@ class Home extends Component {
     
                 };
                 
+                // Updating the state with the new weather report and location list
                 const updatedLocationList = [...locationList, { location, weatherReport: updateWeatherReport }];
                 this.setState({weatherReport:updateWeatherReport,errorMsg:"",locationList:updatedLocationList,location:""})
 
@@ -60,6 +68,8 @@ class Home extends Component {
     
     }
 
+    
+    // Function to handle click on a saved location
     onClickLocation = async (location) => {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=27b56c5ae76d8df5e65708e728629f94`;
         const options = { method: "GET" };
@@ -103,6 +113,7 @@ class Home extends Component {
         }
     };
     
+    // Function to get wind direction based on degree
     getWindDirection = (degree) => {
     if (degree >= 0 && degree <= 22.5) {
         return 'NORTH';
@@ -139,7 +150,7 @@ class Home extends Component {
                         const {mode} = value
                         
                         const bgColor = mode ? "white-bgColor": "black-bgColor" 
-                        const heading = mode ? "white-background" : "black-background"
+                        
                         return (
                             <article className={ `weather-container ${bgColor}`} >
                                 <form onSubmit={this.onSubmitForm} >

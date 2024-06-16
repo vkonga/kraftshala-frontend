@@ -11,7 +11,7 @@ const Header = () => <weathercontext.Consumer>
             changeMode()
         }
         const backgroundColor = mode ? "white-background": "black-background" 
-        const heading = mode ? "white-background" : "black-background"
+        
         return (
             <div className={backgroundColor}>
                 <h1 className='weather-forecast-heading' >WEATHER FORECAST</h1>
