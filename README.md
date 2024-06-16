@@ -1,70 +1,34 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Introduction
+1. The Weather Forecast Application provides users with current weather information for various locations.
+2. Users can search for locations, view detailed weather conditions, save favorite locations, and toggle between light and dark modes.
+### Features
+1. Weather Information: Get current weather details like temperature, humidity, visibility, wind speed, and direction.
+2. Search and Save Locations: Look up locations and save them for future quick access.
+3. Theme Toggle: Switch between light and dark themes.
+4. Responsive Design: Optimized for different devices.
+### Technologies Used
+1. React: Main framework for building the user interface.
+2. OpenWeatherMap API: Source for fetching weather data.
+3. Context API: Manages the application state, particularly for theme toggling.
+### Setup Instructions
+# Clone the Repository:
+git clone https://github.com/yourusername/weather-forecast-app.git
+cd weather-forecast-app
+# Install Dependencies:
+npm install
+# Run the Application:
+npm start
+### Usage
+Search Locations: Type a location name in the search bar and press "ADD".
+View Weather Details: Weather details for the entered location are displayed.
+Save and Access Locations: Saved locations are displayed as buttons. Click a button to view the weather for that location.
+Switch Theme: Toggle between light and dark modes using the sun/moon icon in the header.
+### Components Breakdown
+Header Component: Displays the app title and theme switch button.
+Home Component: Main component managing the search functionality and weather details display.
+WeatherContext: Provides the theme state to the entire application.
+### Key Functions and Methods
+onChangeInputValue: Updates the input state as the user types.
+onSubmitForm: Fetches weather data from OpenWeatherMap API for the entered location.
+onClickLocation: Fetches and displays weather data for a saved location.
+getWindDirection: Converts wind degree into a readable direction format.
